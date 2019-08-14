@@ -5,7 +5,7 @@ const _ = require('lodash');
 
 const DEFAULT_OPTIONS = {
   implementation: sass,
-  sourceMap: false,
+  sourceMap: true,
   includePaths: [
     'node_modules/bootstrap/scss',
     'src/scss',
