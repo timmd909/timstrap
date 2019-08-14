@@ -1,0 +1,16 @@
+{
+  "name": "timstrap",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Bootstrap modified for my purposes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timmd909/timstrap.git"
+  },
+  "author": "Tim Doerzbacher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timmd909/timstrap/issues"
+  },
+  "homepage": "https://github.com/timmd909/timstrap#readme"
+}
