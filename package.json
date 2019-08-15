@@ -1,7 +1,7 @@
 {
   "name": "timstrap",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Bootstrap modified for my purposes",
   "repository": {
     "type": "git",
@@ -14,9 +14,11 @@
   },
   "homepage": "https://github.com/timmd909/timstrap#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": "^4.3.1",
+    "simple-git": "^1.124.0"
   },
   "devDependencies": {
+    "colors": "^1.3.3",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
