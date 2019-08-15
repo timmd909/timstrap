@@ -8,11 +8,11 @@ const DEFAULT_OPTIONS = {
   sourceMap: true,
   includePaths: [
     'node_modules/bootstrap/scss',
-    'src/scss',
+    'scss',
   ],
 };
 
-const MAIN_SOURCE = 'src/scss/timstrap.scss';
+const MAIN_SOURCE = 'scss/timstrap.scss';
 
 module.exports = {
   options: DEFAULT_OPTIONS,
