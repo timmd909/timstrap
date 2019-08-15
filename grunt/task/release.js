@@ -5,11 +5,21 @@ const ROOT_DIR = __dirname + '/../../';
 const simpleGit = require('simple-git/promise')(ROOT_DIR);
 
 module.exports = function (grunt) {
+  const PACKAGE_JSON = JSON.parse(grunt.file.read('package.json'));
+
+  grunt.registerTask('release:commit', function () {
+    var done = this.async();
+    var commitMessage = 'Packaging release ' + PACKAGE_JSON.version;
+
+    simpleGit.add('*')
+      .then(() => simpleGit.commit(commitMessage))
+      .then(() => done());
+  });
+
   grunt.registerTask('release:tag', function () {
     var done = this.async();
 
-    var packageJson = JSON.parse(grunt.file.read('package.json'));
-    var version = packageJson.version;
+    var version = PACKAGE_JSON.version;
 
     simpleGit.tag([version])
       .then(() => {
@@ -22,5 +32,5 @@ module.exports = function (grunt) {
     // all done,
   });
 
-  grunt.registerTask('release', ['build', 'release:tag']);
+  grunt.registerTask('release', ['build', 'release:commit', 'release:tag']);
 };
